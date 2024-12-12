@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.List;
-
 public class Empresa {
     private List<Empleado> empleados;
 
@@ -16,16 +15,16 @@ public class Empresa {
         empleados.remove(empleado);
     }
 
-    public List<Empleado> obtenerEmpleadosPorHorasTrabajadasaPartirDe(int horas) {
-        List<Empleado> empleadosPorTipo = new ArrayList<>();
+    public List<Empleado> obtenerEmpleadosPorHorasTrabajadasA(int horas) {
+        List<Empleado> empleadosFiltrados = new ArrayList<>();
         for (Empleado empleado : empleados) {
-            if (empleado.getHorasTrabajadas()>horas) {
-                empleadosPorTipo.add(empleado);
+            if (empleado.getHorasTrabajadas() > horas) {
+                empleadosFiltrados.add(empleado);
             }
         }
-        return empleadosPorTipo;
+        return empleadosFiltrados;
     }
-
-    // Más metodos
 }
+
+
 
